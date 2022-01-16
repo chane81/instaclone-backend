@@ -1,0 +1,12 @@
+{
+  "name": "instaclone-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "repository": "https://github.com/chane81/instaclone-backend.git",
+  "author": "chane81 <chane81@naver.com>",
+  "license": "MIT",
+  "scripts": {
+    "dev": ""
+  }
+}
