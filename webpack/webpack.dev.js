@@ -12,6 +12,12 @@ const dotEnvPath = path.resolve(rootPath, 'config/.env.dev');
 module.exports = merge(config, {
   mode: 'development',
   devtool: 'source-map',
+  watch: true,
+  watchOptions: {
+    aggregateTimeout: 200,
+    ignored: ['**/node_modules', '**/dist'],
+    poll: 1000,
+  },
   plugins: [
     ...config.plugins,
     new Dotenv({

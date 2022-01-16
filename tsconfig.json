@@ -36,6 +36,6 @@
       "~/entity/*": ["src/entity/*"]
     }
   },
-  "exclude": [".yarn"],
+  "exclude": ["node_modules"],
   "include": ["**/*.ts"]
 }
