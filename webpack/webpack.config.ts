@@ -1,13 +1,12 @@
-
 /* eslint-disable @typescript-eslint/no-var-requires */
-const path = require('path');
-const webpack = require('webpack');
-const nodeExternals = require('webpack-node-externals');
-const terserPlugin = require('terser-webpack-plugin');
+import path from 'path';
+import webpack from 'webpack';
+import nodeExternals from 'webpack-node-externals';
+import TerserPlugin from 'terser-webpack-plugin';
 
 const rootPath = path.resolve(__dirname, '../');
 
-module.exports = {
+const config: webpack.Configuration = {
   devtool: false,
   entry: path.resolve(rootPath, 'src/server.ts'),
   watchOptions: {
@@ -37,11 +36,10 @@ module.exports = {
   },
   optimization: {
     minimizer: [
-      new terserPlugin({
+      new TerserPlugin({
         parallel: true,
         terserOptions: {
           compress: true,
-          ecma: 6,
           keep_classnames: true,
         },
       }),
@@ -60,3 +58,5 @@ module.exports = {
     modules: ['./node_modules'],
   },
 };
+
+export default config;

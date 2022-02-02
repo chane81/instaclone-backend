@@ -7,9 +7,10 @@
   "author": "chane81 <chane81@naver.com>",
   "license": "MIT",
   "scripts": {
-    "dev": "cross-env NODE_ENV=development webpack-cli --color --config ./webpack/webpack.dev.js",
-    "build-dev": "webpack --config ./webpack/webpack.dev.js",
-    "build": "webpack --config ./webpack/webpack.prod.js",
+    "dev": "cross-env NODE_ENV=development webpack-cli --color --config ./webpack/webpack.dev.ts",
+    "build-dev": "webpack --config ./webpack/webpack.dev.ts",
+    "build": "yarn clear & webpack --config ./webpack/webpack.prod.ts",
+    "clear": "rimraf ./dist",
     "start": "node ./dist/server.js"
   },
   "dependencies": {
@@ -24,6 +25,8 @@
     "@types/cors": "^2.8.12",
     "@types/dotenv": "^8.2.0",
     "@types/node": "^17.0.8",
+    "@types/terser-webpack-plugin": "^5.2.0",
+    "@types/webpack": "^5.28.0",
     "@typescript-eslint/eslint-plugin": "^5.9.1",
     "@typescript-eslint/parser": "^5.9.1",
     "cross-env": "^7.0.3",
@@ -33,6 +36,7 @@
     "eslint-plugin-prettier": "^4.0.0",
     "nodemon-webpack-plugin": "^4.7.0",
     "prettier": "^2.5.1",
+    "rimraf": "^3.0.2",
     "terser-webpack-plugin": "^5.3.0",
     "ts-loader": "^9.2.6",
     "ts-node": "^10.4.0",

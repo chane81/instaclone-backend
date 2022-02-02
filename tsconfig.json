@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
-    "target": "es2017",
-    "module": "commonjs",
+    "target": "ES5",
+    "module": "CommonJS",
     "lib": ["es5", "es6"],
     "sourceMap": true,
     "incremental": true,
@@ -36,6 +36,6 @@
       "~/entity/*": ["src/entity/*"]
     }
   },
-  "exclude": ["node_modules"],
+  "exclude": ["node_modules", "dist", "webpack"],
   "include": ["**/*.ts"]
 }
