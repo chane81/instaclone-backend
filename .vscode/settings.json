@@ -15,7 +15,7 @@
   "[typescript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "editor.fontFamily": "'SeoulNamsanM'",
+  "editor.fontFamily": "'MesloLGS NF',Consolas,'Courier New',monospace, 'Malgun Gothic'",
   "typescript.suggest.autoImports": true,
   // perttier 설정
   "prettier.jsxSingleQuote": true,
