@@ -15,6 +15,20 @@
 - vsc extension setup
   - "Prisma" 검색 후 설치
 
+### Prisma Studio
+- url
+  - https://www.prisma.io/studio
+  - https://www.prisma.io/docs/concepts/components/prisma-studio
+- setup
+  ```bash
+  ## 공식문서에는 아래와 같이 하면 된다.라고 나오지만 .env 파일이 root 디렉토리가 아닌 다른 폴더에 있다면 다르게 실행 시켜 주어야함
+  $ npx prisma studio
+
+  ## 다른폴더에 .env 파일이 있다면 아래처럼 실행(package.json에 등록이 편함)
+  $ dotenv -e config/.env.dev -- npx prisma studio
+  ```
+
+
 ### db modeling & migrate
 - 모델작성
   - /prisma/schema.prisma
